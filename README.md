@@ -1,6 +1,6 @@
 # open sourced scraper because a bunch of people were upset at nvidia
 
-## nvidia sicord Overflow Rm 2
+## nvidia discord Overflow Rm 2
 
 ### instructions : 
 
