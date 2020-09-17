@@ -2,5 +2,5 @@
     "debug" : true,
     "har" : false,
     "refreshrt" : 10000,
-    "nvidia_url" : "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=2&locale=en-us&gpu=RTX%203090,RTX%203080"
+    "nvidia_url" : "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080"
 }
