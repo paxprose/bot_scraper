@@ -1,0 +1,16 @@
+{
+  "name": "fever308_help",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opn": "^6.0.0",
+    "puppeteer": "^5.3.0",
+    "puppeteer-har": "^1.1.2"
+  }
+}
