@@ -1,47 +1,45 @@
-/*v.0.1.1 */
+/*v.0.1.2 */
 
 'use-strict';
 const puppeteer = require('puppeteer');
-const PuppeteerHar = require('puppeteer-har'); 
+//const PuppeteerHar = require('puppeteer-har'); 
 const opn = require('opn');
-
+const config = require('./config/config.json');
 /*
-instructions : 
+instructions via readme
 
-Step 1 - make sure you have npm installed : https://www.npmjs.com/get-npm
-Step 1.2 - copy the contents of this file into a new file somewhere called "index.js"
 
-Step 2 - you have to install all the bullshit this thing needs in order to run 
-  - so open up a new command terminal and naviagte to whatever folder you put the .index.js file into
-  - # npm i opn
-  - # npm i puppeteer
-  - # npm i puppeteer-har
-
-Step 3 - make the other folders you need to keep things tidy
-  - # mkdir screenshots
-  - # mkdir har
-
-Step 4 - see if you can run the thing 
-  - # node index.js
 */
+var cancel = false; 
 (async () => {
     try {
+        if(config.debug) { console.log(`${Date.now()} | nvidia card scanner running...`); }
         const browser = await puppeteer.launch();
-        await nvidia(browser);
+        while(!cancel) {
+            await nvidia(browser);
+            //we'll hit the website at a 
+            //reasonable 10 seconds per minute
+            await sleep(config.refreshrt); 
+        }
+        await browser.close();
+        
     }
     catch(error){
         console.log(error); 
     }
 })();
 
+function sleep(millis) {
+    if(config.debug){ console.log(`${Date.now()} |sleeping for : ${millis}`); }
+    return new Promise(resolve => setTimeout(resolve, millis));
+  }
+
 async function nvidia(browser) {
     try {
+        if(config.debug) { console.log(`${Date.now()} | reaching out to nvidia website @ ${config.nvidia_url}`); }
         const page = await browser.newPage(); 
-        const har = new PuppeteerHar(page); 
-        await har.start({ 'path' : `./har/${Date.now()}.har`});
-    
         await page.goto(
-            'https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080&gpu_filter=RTX%203080',
+            config.nvidia_url,
             {
                 'waitUntil' : 'networkidle0'
             });
@@ -51,16 +49,14 @@ async function nvidia(browser) {
             }
         });
         if(!dom.body.includes('OUT OF STOCK')){
-            console.log('Out of stock not detected - buy?');
-            opn('https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080&gpu_filter=RTX%203080');
+            cancel = true; 
+            console.log(`${Date.now()} | in stock detected...`);
+            opn(config.nvidia_url);
             await page.screenshot({ 
                 'path' : `./screenshots/${Date.now()}.png`,
                 'fullPage' : true
             });
         }
-
-        await har.stop(); 
-        await browser.close();
     }catch(error) {
         console.log(error);
     }
