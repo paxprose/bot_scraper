@@ -5,6 +5,7 @@
 ### instructions : 
 
 Step 1 - make sure you have npm installed : https://www.npmjs.com/get-npm
+
 Step 2 - clone back the repo
 
 Step 3 - you have to install all the bullshit this thing needs in order to run 
