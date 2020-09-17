@@ -14,9 +14,5 @@ Step 3 - you have to install all the bullshit this thing needs in order to run
   - ```npm i puppeteer```
   - ```npm i puppeteer-har```
 
-Step 4 - make the other folders you need to keep things tidy
-  - ```mkdir screenshots```
-  - ```mkdir har```
-
 Step 5 - see if you can run the thing 
   - ```node index.js```
