@@ -30,9 +30,10 @@ An open sourced scraper that opens a tab to nvidia's website when believed to be
 
 ## TODO's
 
-- ~~Only runs once and exits - put it it in a loop w/ some threadsleep behavior so you don't get locked out~~
-  - tossed everything inside of a blocking event loop
-- Add more than just nvidia's website
++ ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
+  + tossed everything inside of a blocking event loop
++ Add more than just nvidia's website [ bestbuy, newegg, ..?]
+  + started adding some template & configuraiton link stuff for best buy
 
 ### Notes
 

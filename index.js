@@ -1,8 +1,5 @@
-/*v.0.1.2 */
-
 'use-strict';
 const puppeteer = require('puppeteer');
-//const PuppeteerHar = require('puppeteer-har'); 
 const opn = require('opn');
 const config = require('./config/config.json');
 /*
@@ -17,6 +14,7 @@ var cancel = false;
         const browser = await puppeteer.launch();
         while(!cancel) {
             await nvidia(browser);
+            await bestbuy(browser); 
             //we'll hit the website at a 
             //reasonable 10 seconds per minute
             await sleep(config.refreshrt); 
@@ -30,7 +28,7 @@ var cancel = false;
 })();
 
 function sleep(millis) {
-    if(config.debug){ console.log(`${Date.now()} |sleeping for : ${millis}`); }
+    if(config.debug){ console.log(`${Date.now()} | sleeping for : ${millis}`); }
     return new Promise(resolve => setTimeout(resolve, millis));
   }
 
@@ -43,6 +41,12 @@ async function nvidia(browser) {
             {
                 'waitUntil' : 'networkidle0'
             });
+        await page.on('response', response => {
+            if(config.debug) { console.log(`${Date.now()} | response : ${response.status()}`); }
+            if (response.status() !== 200) {
+                  console.log(`${Date.now()} | non 200 status returned. exiting.`);
+                  cancel = true;
+                }});
         const dom = await page.evaluate(() => {
             return {
                 'body' : document.body.innerText
@@ -57,6 +61,14 @@ async function nvidia(browser) {
                 'fullPage' : true
             });
         }
+    }catch(error) {
+        console.log(error);
+    }
+}
+
+async function bestbuy(browser) {
+    try {
+
     }catch(error) {
         console.log(error);
     }
