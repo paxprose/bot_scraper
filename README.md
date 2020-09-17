@@ -16,3 +16,12 @@ Step 3 - you have to install all the bullshit this thing needs in order to run
 
 Step 5 - see if you can run the thing 
   - ```node index.js```
+
+#### TODO's
+
++ Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out
++ Add more than just nvidia's website?
+
+
+### other notes
+ - _i got banned from the nvidia discord, hit me up @ paxprose#1644_
