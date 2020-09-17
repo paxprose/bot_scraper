@@ -1,34 +1,44 @@
-# open sourced scraper because a bunch of people were upset at nvidia
+# Bot Scraper
 
-## this tool doesn't buy anything for you, it only opens up a webpage if it thinks it can.
+![GitHub](https://img.shields.io/github/license/paxprose/bot_scraper?style=flat-square)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/paxprose/bot_scraper?style=flat-square)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-## nvidia discord Overflow Rm 2
+An open sourced scraper that opens a tab to nvidia's website when believed to be restocked
 
-### instructions
+## Instructions
 
-![](howto.gif)
+![](./assets/howto.gif)
 
-Step 1 - make sure you have npm installed : https://www.npmjs.com/get-npm
+1. download and install npm: <https://www.npmjs.com/get-npm>
 
-Step 2 - clone back the repo
+2. clone/download the repo
 
-Step 3 - you have to install all the dependencies this thing needs in order to run
+3. install required dependencies
+    - open up a new command terminal and navigate to the folder containing ```index.js```
+    - install the dependencies by running the command:
 
-+ open up a new command terminal and naviagte to whatever folder the ```.index.js``` file is in
-+ ```npm i```
+    ```sh
+    npm install
+    ```
 
-Step 5 - see if you can run the thing
+4. start the script
 
-+ ```node index.js```
+    ```sh
+    node index.js
+    ```
 
-#### TODO's
+## TODO's
 
-+ ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
-  + tossed everything inside of a blocking event loop
-+ Add more than just nvidia's website
+- ~~Only runs once and exits - put it it in a loop w/ some threadsleep behavior so you don't get locked out~~
+  - tossed everything inside of a blocking event loop
+- Add more than just nvidia's website
 
-### other notes
+### Notes
 
-+ _i got banned from the nvidia discord, hit me up @ paxprose#1644_
+- _i got banned from the nvidia discord, message me @ paxprose#1644_
 
-## end
+## License
+
+This software is licensed under the terms of the GNU General Public License version 3 (GPLv3).
+Full text of the license is available in the COPYING file and online.
