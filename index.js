@@ -4,8 +4,6 @@ const config = require('./config/config.json');
 const nvidia = require('./endpoints/nvidia');
 var cancel = false; 
 
-const config = require("./config/config.json");
-
 (async () => {
     try {
         if(config.debug) { console.log(`${Date.now()} | nvidia card scanner running...`); }
@@ -15,7 +13,10 @@ const config = require("./config/config.json");
         if(config.nvidia.active) { endpoints.push(nvidia.nav(browser)); }
         
         while(!cancel) {            
-            Promise.all(endpoints);
+            //this doesn't behave the way i thought it would...
+            //Promise.all(endpoints);
+
+            await nvidia.nav(browser);
             
             //we'll hit the website at a 
             //reasonable 10 seconds per minute
