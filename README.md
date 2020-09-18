@@ -4,11 +4,11 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/paxprose/bot_scraper?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-An open sourced scraper that opens a tab to nvidia's website when believed to be restocked
+An open sourced scraper that opens a tab to a website when rtx cards are believed to haven been restocked
 
 ## Instructions
 
-![](./assets/howto.gif)
+![visual instructions](./assets/howto.gif)
 
 1. download and install npm: <https://www.npmjs.com/get-npm>
 
@@ -25,21 +25,24 @@ An open sourced scraper that opens a tab to nvidia's website when believed to be
 4. start the script
 
     ```sh
-    node index.js
+    npm start
     ```
 
 ## TODO's
 
-+ ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
-  + tossed everything inside of a blocking event loop
-+ Add more than just nvidia's website [ bestbuy, newegg, ..?]
-  + started adding some template & configuraiton link stuff for best buy
+- ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
+  - tossed everything inside of a blocking event loop
+- Add more than just nvidia's website [ bestbuy, newegg, ..?]
+  - started adding some template & configuraiton link stuff for best buy
 
 ### Notes
 
 - _i got banned from the nvidia discord, message me @ paxprose#1644_
 
 ## License
+
+All product names, logos, and brands are property of their respective owners. All company, product and service names
+used are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
 
 This software is licensed under the terms of the GNU General Public License version 3 (GPLv3).
 Full text of the license is available in the COPYING file and online.
