@@ -26,24 +26,12 @@ const config = require("./config/config.json");
         }
         await browser.close();
         
-    }
-
-    const browser = await puppeteer.launch();
-    while (!cancel) {
-      await nvidia(browser);
-      await bestbuy(browser);
-
-      // we'll hit the website at a reasonable 10 seconds per minute
-      await sleep(config.refreshrt);
-    }
-
-    await browser.close();
-  } catch (error) {
+    } catch (error) {
     console.log(error);
   }
 })();
 
 function sleep(millis) {
-  if (config.debug) {
-    console.log(`${Date.now()} | sleeping for : ${millis}`);
+    if(config.debug){ console.log(`${Date.now()} | sleeping for : ${millis}`); }
+    return new Promise(resolve => setTimeout(resolve, millis));
   }
