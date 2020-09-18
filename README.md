@@ -32,8 +32,9 @@ An open sourced scraper that opens a tab to a website when rtx cards are believe
 
 - ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
   - tossed everything inside of a blocking event loop
-- Add more than just nvidia's website [ bestbuy, newegg, ..?]
-  - started adding some template & configuraiton link stuff for best buy
+- Add more than just nvidia's website [ ~~bestbuy~~, newegg, ..?]
+  - bestbuy parallel gets in place, they're slow though :\
+  - newegg?
 
 ### Notes
 
