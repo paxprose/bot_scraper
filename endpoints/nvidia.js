@@ -22,7 +22,7 @@ module.exports.nav = async function(browser) {
                 'body' : document.body.innerText
             }
         });
-        if(dom.body.includes('OUT OF STOCK')){
+        if(!dom.body.includes('OUT OF STOCK')){
             cancel = true; 
             console.log(`${Date.now()} | in stock detected...`);
             await open(config.nvidia.urls[0], { app : config.default_browser });
