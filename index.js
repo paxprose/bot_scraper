@@ -4,7 +4,6 @@ const config = require('./config/config.json');
 const nvidia = require('./endpoints/nvidia');
 var cancel = false; 
 
-const puppeteer = require("puppeteer");
 const config = require("./config/config.json");
 
 (async () => {
