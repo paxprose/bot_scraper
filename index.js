@@ -10,13 +10,19 @@ var cancel = false;
         var endpoints = []; 
 
         const browser = await puppeteer.launch();
-        //if(config.nvidia.active) { endpoints.push(nvidia.nav(browser)); }
+        if(config.nvidia.active) { endpoints.push(nvidia); }
         
         while(!cancel) {            
-            //this doesn't behave the way i thought it would...
-            //Promise.all(endpoints);
+            
+            Promise.all(endpoints.map(async (e) => {
+                try {
+                    return e.nav(browser);
+                }catch(error){
+                    console.log(`${Date.now()} | generic endpoint router | ex | ${error}`);
+                }
+            }));
 
-            await nvidia.nav(browser);
+            //await nvidia.nav(browser);
 
             //we'll hit the website at a 
             //reasonable 10 seconds per minute
