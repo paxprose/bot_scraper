@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 const config = require('./config/config.json');
 const nvidia = require('./endpoints/nvidia');
 const bestbuy = require('./endpoints/bestbuy');
+const newegg = require('./endpoints/newegg');
 var cancel = false; 
 
 (async () => {
@@ -10,23 +11,23 @@ var cancel = false;
         if(config.debug) { console.log(`${Date.now()} | nvidia card scanner running...`); }
         var endpoints = []; 
 
-        const browser = await puppeteer.launch({ headless : true});
         if(config.nvidia.active) { endpoints.push(nvidia); }
         if(config.bestbuy.active) { endpoints.push(bestbuy); }
+        if(config.newegg.active) { endpoints.push(newegg); }
 
         while(!cancel) {            
-            
-            var cancelAny = await Promise.all(endpoints.map(async (e) => {
+            const browser = await puppeteer.launch({ headless : true});
+            await Promise.all(endpoints.map(async (e) => {
                 try {
                     return e.nav(browser);
                 }catch(error){
                     console.log(`${Date.now()} | generic endpoint router | ex | ${error}`);
                 }
             }));
-
+            await browser.close();
             await sleep(config.refreshrt); 
         }
-        await browser.close();
+        
         
     } catch (error) {
     console.log(error);

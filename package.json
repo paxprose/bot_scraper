@@ -10,6 +10,7 @@
   "author": "",
   "license": "GPLv3",
   "dependencies": {
+    "axios": "^0.20.0",
     "open": "^7.2.1",
     "puppeteer": "^5.3.0",
     "puppeteer-har": "^1.1.2"

@@ -16,7 +16,7 @@ module.exports.nav = async function(browser) {
                     ['Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9']
                  );
                  await page.setRequestInterception(true);
-                 page.on('request', (request) => {
+                 await page.on('request', async (request) => {
                      if (['image', 'stylesheet', 'font', 'script'].indexOf(request.resourceType()) !== -1) {
                          request.abort();
                      } else {
@@ -26,10 +26,8 @@ module.exports.nav = async function(browser) {
                 
                 //the full dom evaluation takes > 30 seconds
                 //which sucks - it means folks probably wouldn't benifit from this too much
-                //on the upside it is checking each url independantly... 
-
-                await page.goto(
-                    url,
+                //on the upside it is checking each url independantly...
+                await page.goto(url,
                     {
                         'timeout' : 0
                     });
@@ -46,6 +44,7 @@ module.exports.nav = async function(browser) {
                         'path' : `./screenshots/${Date.now()}.png`,
                         'fullPage' : true
                     });
+                    return 0;
                 }
             }catch(error) {
                 console.log(`${Date.now()} | bestbuy | nav | Promise.all | ex | ${error}`); 
