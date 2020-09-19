@@ -8,6 +8,8 @@ An open sourced scraper that opens a tab to a website when rtx cards are believe
 
 ## Instructions
 
+_note_ : running this behind a vpn is recommended
+
 ![visual instructions](./assets/howto.gif)
 
 1. download and install npm: <https://www.npmjs.com/get-npm>
@@ -32,9 +34,11 @@ An open sourced scraper that opens a tab to a website when rtx cards are believe
 
 - ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
   - tossed everything inside of a blocking event loop
-- Add more than just nvidia's website [ ~~bestbuy~~, newegg, ..?]
-  - bestbuy parallel gets in place, they're slow though :\
-  - newegg?
+- Add more than just nvidia's website
+  - ~~bestbuy~~
+  - b&h
+  - amazon
+  - newegg - in progress
 
 ### Notes
 
