@@ -34,13 +34,15 @@ _note_ : running this behind a vpn is recommended
 
 - ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
   - tossed everything inside of a blocking event loop
-- Add more than just nvidia's website
+- Sources
+  - ~~nvidia~~
   - ~~bestbuy~~
   - b&h
   - amazon
-  - ~~newegg~~
+  - ~~newegg~~ - they've actually got some pretty decent anti-bot measure (see below)
     - sometimes throws errors of _| newegg | nav | Promise.all | ex | TypeError: Cannot read property '1' of null_
-      - i've increased the default config threshold to compensate.
+    - needs refactoring with more "human" behavior.
+      - ~~i've increased the default config threshold to compensate~~ - didn't matter. catches it after vpn hopping too.
 
 ### Notes
 

@@ -6,6 +6,7 @@ const open = require('open');
 //this one works a little differently
 //i had to track a subcall into newegg's "LandingPage" endpoint
 //that ended up having a really convenient json payload we can use. 
+//we can just rebuild the product's url from the beforementioned json payload.
 module.exports.nav = async function(browser) {
     try {
         
@@ -24,13 +25,18 @@ module.exports.nav = async function(browser) {
                     }
                 });
                 var matches = dom.body.toString().match(new RegExp('"mainItem":' + '(.*)'));
-                var raw = matches[1]; 
-                var data = JSON.parse(raw.substr(0, raw.length - 2));
-                if(data.instock){
-                    console.log(`${Date.now()} | newegg in stock detected...opening browser`);
-                    await open(`https://newegg.com/${data.urlKeywords}/p/${data.neweggItemNumber}`);
-                    return 0;
+                if(matches != null){
+                    var raw = matches[1]; 
+                    var data = JSON.parse(raw.substr(0, raw.length - 2));
+                    if(data.instock){
+                        console.log(`${Date.now()} | newegg in stock detected...opening browser`);
+                        await open(`https://newegg.com/${data.urlKeywords}/p/${data.neweggItemNumber}`);
+                        return 0;
+                    }
+                }else{
+                    console.log(`${Date.now()} | newegg regex match not found @ ${url} | expand the timeout or disallow newegg in the config.json`);
                 }
+
             }catch(error) {
         console.log(`${Date.now()} | newegg | nav | Promise.all | ex | ${error}`); 
     }
