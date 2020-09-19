@@ -38,11 +38,13 @@ _note_ : running this behind a vpn is recommended
   - ~~bestbuy~~
   - b&h
   - amazon
-  - newegg - in progress
+  - ~~newegg~~
+    - sometimes throws errors of _| newegg | nav | Promise.all | ex | TypeError: Cannot read property '1' of null_
+      - i've increased the default config threshold to compensate.
 
 ### Notes
 
-- _i got banned from the nvidia discord, message me @ paxprose#1644_
+- join our discord! _https://discord.gg/fpAcJE8_
 
 ## License
 

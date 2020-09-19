@@ -1,6 +1,6 @@
 {
     "debug" : true,
-    "refreshrt" : 5000,
+    "refreshrt" : 20000,
     "default_browser" : "firefox",
     "nvidia" : {
         "urls" : [
