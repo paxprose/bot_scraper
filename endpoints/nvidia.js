@@ -4,7 +4,7 @@ const open = require('open');
 
 module.exports.nav = async function(browser) {
     try {
-        return Promise.all(config.bestbuy.urls.map(async (url) => {
+        return Promise.all(config.nvidia.urls.map(async (url) => {
             if(config.debug) { console.log(`${Date.now()} | reaching out to nvidia website @ ${url}`); }
             const page = await browser.newPage(); 
 
