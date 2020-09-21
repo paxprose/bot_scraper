@@ -1,11 +1,12 @@
-'use-strict'
+'use-strict';
+
 const config = require('../config/config.json');
-const open = require('open');
+const open = require('open'); 
 
 module.exports.nav = async function(browser) {
     try {
-        return Promise.all(config.nvidia.urls.map(async (url) => {
-            if(config.debug) { console.log(`${Date.now()} | reaching out to nvidia website @ ${url}`); }
+        return Promise.all(config.amazon.urls.map(async (url) => {
+            if(config.debug) { console.log(`${Date.now()} | reaching out to amazon website @ ${url}`); }
             const page = await browser.newPage(); 
 
             await page.setRequestInterception(true);
@@ -17,10 +18,12 @@ module.exports.nav = async function(browser) {
                 }
             });
             
+            
             await page.goto(
                 url,
                 {
-                    'waitUntil' : 'networkidle0'
+                    'waitUntil' : 'networkidle0',
+                    'timeout' : 0
                 });
 
             const dom = await page.evaluate(() => {
@@ -28,8 +31,8 @@ module.exports.nav = async function(browser) {
                     'body' : document.body.innerText
                 }
             });
-            if(!dom.body.includes('Out Of Stock')){
-                console.log(`${Date.now()} | nvidia in stock detected...opening browser`);
+            if(!dom.body.includes('Currently unavailable')){
+                console.log(`${Date.now()} | amazon in stock detected...opening browser`);
                 await open(url, { app : config.default_browser });
                 return 0;
             }

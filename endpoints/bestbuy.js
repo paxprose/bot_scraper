@@ -29,6 +29,7 @@ module.exports.nav = async function(browser) {
                 //on the upside it is checking each url independantly...
                 await page.goto(url,
                     {
+                        'waitUntil' : 'domcontentloaded',
                         'timeout' : 0
                     });
 

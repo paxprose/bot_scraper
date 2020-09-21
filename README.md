@@ -39,10 +39,7 @@ _note_ : running this behind a vpn is recommended
   - ~~bestbuy~~
   - b&h
   - amazon
-  - ~~newegg~~ - they've actually got some pretty decent anti-bot measure (see below)
-    - sometimes throws errors of _| newegg | nav | Promise.all | ex | TypeError: Cannot read property '1' of null_
-    - needs refactoring with more "human" behavior.
-      - ~~i've increased the default config threshold to compensate~~ - didn't matter. catches it after vpn hopping too.
+  - ~~newegg~~ - disabled. obvious anti-bot measures exhibited after testing.
 
 ### Notes
 
