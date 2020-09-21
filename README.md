@@ -34,11 +34,12 @@ _note_ : running this behind a vpn is recommended
 
 - ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
   - tossed everything inside of a blocking event loop
+- ~~refactor so that endpoints inherit from a base~~
 - Sources
   - ~~nvidia~~
   - ~~bestbuy~~
   - b&h
-  - amazon
+  - amazon - kind of complete. needs cookie handling
   - ~~newegg~~ - disabled. obvious anti-bot measures exhibited after testing.
 
 ### Notes

@@ -1,6 +1,5 @@
 'use-strict';
 
-const fs = require('fs').promises;
 const open = require('open');
 
 class Endpoint { 
@@ -23,9 +22,6 @@ class Endpoint {
             return Promise.all(this._config.urls.map(async (url) => {
                 try {
                     const page = await browser.newPage();
-                    // if(Array.isArray(options.headers) && options.headers.length) {
-
-                    // }
 
                     //something about this is broken ignoring for now by not passing in any intercept params...
                     //todo debug the stuff between this _if_ statement
