@@ -1,12 +1,13 @@
 {
+
+    "refreshrt" : 30000,
     "debug" : true,
-    "refreshrt" : 20000,
-    "default_browser" : "firefox",
     "nvidia" : {
         "urls" : [
            "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080"
         ],
-        "active" : true
+        "active" : true,
+        "default_browser" : "firefox"
     },
     "bestbuy": {
         "urls" : [
@@ -18,23 +19,8 @@
                 "https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445",
                 "https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432400.p?skuId=6432400"
         ],
-        "active" : true
-    },
-    "newegg": {
-        "urls" : [
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-137-597",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-932-329",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-487-522",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-126-457",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-126-452",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-932-330",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-137-598",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-126-453",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-500-502",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-137-600",
-            "https://www.newegg.com/LandingPage/ItemInfo4ProductDetail2016.aspx?Item=14-500-504"            
-        ],
-        "active" : false
+        "active" : true,
+        "default_browser" : "firefox"
     },
     "amazon": {
         "urls" : [
@@ -51,6 +37,7 @@
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp",
             "https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp"
         ],
-        "active" : true
+        "active" : true,
+        "default_browser" : "firefox"
     }
 }

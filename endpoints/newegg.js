@@ -1,4 +1,4 @@
-'use-strict';
+/*'use-strict';
 
 const config = require('../config/config.json');
 const open = require('open'); 
@@ -47,3 +47,4 @@ module.exports.nav = async function(browser) {
         console.log(`${Date.now()} | newegg | nav | ex | ${error}`); 
     }
 }
+*/
