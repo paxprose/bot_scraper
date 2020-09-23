@@ -6,7 +6,6 @@ class BestBuy extends Endpoint{
         super(config);
         this.name = 'bestbuy';
         this.options = {
-                //'intercept' : ['image', 'stylesheet', 'font'],
                 'headers' : [                    
                     ['DNT', '1'],
                     ['Upgrade-Insecure-Requests', '1'],
@@ -23,10 +22,10 @@ class BestBuy extends Endpoint{
             console.log(`${Date.now()} | reaching out to ${this._config.urls.length} bestbuy website(s)`); 
             var responses = await super.nav(this.name, browser, this.options);
             var successes = responses.filter((x) => x !== undefined); 
-            console.log(`${Date.now()} | ${successes.length} bestbuy cards found`);
+            console.log(`${Date.now()} |   ${successes.length} bestbuy cards found`);
             await super.open(successes); 
         }catch(error){
-            console.log(`${Date.now()} | bestbuy | nav | exception : ${error}`);
+            console.log(`${Date.now()} |  bestbuy | nav | exception : ${error}`);
         }
     }
 }

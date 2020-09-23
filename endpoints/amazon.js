@@ -7,9 +7,9 @@ class Amazon extends Endpoint{
         super(config);
         this.name = 'amazon';
         this.options = {
-            //'intercept' : ['image', 'stylesheet', 'font'],
             'waitUntil' : 'networkidle0',
-            'domEval' :  'Currently unavailable'
+            'domEval' :  'Currently unavailable',
+            'useCookies' : true
         };
     }
 
@@ -18,7 +18,7 @@ class Amazon extends Endpoint{
             console.log(`${Date.now()} | reaching out to ${this._config.urls.length} amazon website(s)`);            
             var responses = await super.nav(this.name, browser, this.options);
             var successes = responses.filter((x) => x !== undefined); 
-            console.log(`${Date.now()} | ${successes.length} amazon cards found`);
+            console.log(`${Date.now()} |   ${successes.length} amazon cards found`);
             await super.open(successes); 
         }catch(error) {
             console.log(`${Date.now()} | nvidia | nav | exception : ${error}`);

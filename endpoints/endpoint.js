@@ -1,6 +1,8 @@
 'use-strict';
 
+const cookiemanager = require('../cookies/cookiemanager'); 
 const open = require('open');
+
 
 class Endpoint { 
     constructor(config){
@@ -15,33 +17,22 @@ class Endpoint {
     /// options.waitUntil : wait condition for page.goto function. 
     ///    see : https://stackoverflow.com/questions/52497252/puppeteer-wait-until-page-is-completely-loaded
     /// options.domEval : object to speicfy individual web dom evluation behavior from page.evaluate() return string
-    ///    .exludes : array that specifies text the dom should not have in order to present a positive condition
+    /// options.exludes : array that specifies text the dom should not have in order to present a positive condition
     async nav(name, browser, options) {
         try {
         
             return Promise.all(this._config.urls.map(async (url) => {
                 try {
                     const page = await browser.newPage();
-
-                    //something about this is broken ignoring for now by not passing in any intercept params...
-                    //todo debug the stuff between this _if_ statement
-                    if(Array.isArray(options.intercept) && options.intercept.length){
-                        console.log(`${Date.now()} | options | excluding : ${options.intercept}`);
-                        console.log(`note - this might be broken`);
-                        await page.setRequestInterception(true);
-                        await page.on('request', (req) => {
-                            console.log(`req : ${req.resourceType()}`);
-                            if(options.intercept.indexOf(req.resourceType()) !== -1){
-                                console.log(`${Date.now()} | aborting reqest ${type}`);
-                                request.abort();
-                            }else{
-                                request.continue; 
-                            }
-                        });
-                    }
                     if(Array.isArray(options.headers) && options.headers.length) {
-                        for(var i = 0; i <= options.headers.length -1; i++) {
-                            await page.setExtraHTTPHeaders(options.headers[i]);
+                            await page.setExtraHTTPHeaders(...options.headers);
+                    }
+
+                    if(options.useCookies) {
+                        var exists = await cookiemanager.exists(url); 
+                        if(exists){
+                            var cookies = await cookiemanager.fetch(url);
+                            await page.setCookie(...cookies); 
                         }
                     }
 
@@ -55,6 +46,12 @@ class Endpoint {
                             'body' : document.body.innerText
                         }
                     });
+                    
+                    if(options.useCookies){
+                        var cookies = await page.cookies();
+                        await cookiemanager.replace(url, cookies); 
+                    }
+
                     if(!dom.body.includes(options.domEval) & status == 200){
                         return  {
                             'status' : status,

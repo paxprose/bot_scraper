@@ -9,7 +9,8 @@ class Nvidia extends Endpoint{
         this.options = {
             //'intercept' : ['image', 'stylesheet', 'font'],
             'waitUntil' : 'networkidle0',
-            'domEval' :  'OUT OF STOCK'
+            'domEval' :  'OUT OF STOCK',
+            'useCookies' : true
         };
     }
 
@@ -23,7 +24,7 @@ class Nvidia extends Endpoint{
             console.log(`${Date.now()} | reaching out to ${this._config.urls.length} nvidia website(s)`);            
             var responses = await super.nav(this.name, browser, this.options);
             var successes = responses.filter((x) => x !== undefined); 
-            console.log(`${Date.now()} | ${successes.length} nvidia cards found`);
+            console.log(`${Date.now()} |   ${successes.length} nvidia cards found`);
             await super.open(successes); 
 
         }catch(error) {

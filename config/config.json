@@ -37,7 +37,7 @@
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp",
             "https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp"
         ],
-        "active" : false,
+        "active" : true,
         "default_browser" : "firefox"
     }
 }
