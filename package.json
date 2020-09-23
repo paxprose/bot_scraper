@@ -7,7 +7,7 @@
     "start": "node index.js",
     "format": "npm run private:format -- --write",
     "check-format": "npm run private:format -- --list-different",
-    "private:format": "prettier index.js \"endpoints/*.js\"",
+    "private:format": "prettier index.js \"endpoints/*.js\" \"cookies/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
