@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "format": "npm run private:format -- --write",
+    "check-format": "npm run private:format -- --list-different",
+    "private:format": "prettier index.js \"endpoints/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,5 +17,8 @@
     "open": "^7.2.1",
     "puppeteer": "^5.3.0",
     "puppeteer-har": "^1.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
   }
 }
