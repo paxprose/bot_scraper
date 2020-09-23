@@ -39,10 +39,10 @@ _note_ : running this behind a vpn is recommended
   - ~~nvidia~~
   - ~~bestbuy~~
   - b&h
-  - amazon - kind of complete. needs cookie handling
+  - ~~amazon~~
   - ~~newegg~~ - disabled. obvious anti-bot measures exhibited after testing.
 
-### Notes
+## Notes
 
 - join our discord! _https://discord.gg/fpAcJE8_
 
