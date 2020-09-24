@@ -4,20 +4,30 @@
     "debug" : true,
     "nvidia" : {
         "urls" : [
-           "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080"
+            "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080",
+            "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203090"
         ],
         "active" : true,
         "default_browser" : "firefox"
     },
     "bestbuy": {
         "urls" : [
-                "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
-                "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621",
-                "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
-                "https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440",
-                "https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432399.p?skuId=6432399",
-                "https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445",
-                "https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432400.p?skuId=6432400"
+            "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
+            "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621",
+            "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
+            "https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440",
+            "https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432399.p?skuId=6432399",
+            "https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445",
+            "https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432400.p?skuId=6432400",
+            "https://www.bestbuy.com/site/msi-geforce-rtx-3090-ventus-3x-24g-oc-bv-24gb-gddr6x-pci-express-4-0-graphics-card-black-silver/6430215.p?skuId=6430215",
+            "https://www.bestbuy.com/site/nvidia-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429434.p?skuId=6429434",
+            "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3090-24g-gddr6x-pci-express-4-0-graphics-card-black/6430623.p?skuId=6430623",
+            "https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432656.p?skuId=6432656",
+            "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3090-24g-gddr6x-pci-express-4-0-graphics-card-black/6430624.p?skuId=6430624",
+            "https://www.bestbuy.com/site/asus-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432447.p?skuId=6432447",
+            "https://www.bestbuy.com/site/evga-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card/6434363.p?skuId=6434363",
+            "https://www.bestbuy.com/site/asus-tuf-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-black/6432446.p?skuId=6432446",
+            "https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657"
         ],
         "active" : true,
         "default_browser" : "firefox"
@@ -35,7 +45,16 @@
             "https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3080GAMING/dp/B08HJTH61J?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp",
-            "https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp"
+            "https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp",
+            "https://www.amazon.com/ZOTAC-Graphics-IceStorm-Advanced-ZT-A30900D-10P/dp/B08HJQ182D?ref_=ast_sto_dp",
+            "https://www.amazon.com/PNY-GeForce-Gaming-Epic-X-Graphics/dp/B08HBQWBHH?ref_=ast_sto_dp",
+            "https://www.amazon.com/PNY-GeForce-RTX-3090-Graphics/dp/B08HBVX53D?ref_=ast_sto_dp",
+            "https://www.amazon.com/MSI-GeForce-RTX-3090-24G/dp/B08HRBW6VB?ref_=ast_sto_dp",
+            "https://www.amazon.com/MSI-GeForce-384-Bit-Architecture-Graphics/dp/B08HR9D2JS?ref_=ast_sto_dp",
+            "https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3090GAMING/dp/B08HJRF2CN?ref_=ast_sto_dp",
+            "https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3090EAGLE/dp/B08HJPDJTY?ref_=ast_sto_dp",
+            "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJGNJ81?ref_=ast_sto_dp",
+            "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJLLF7G?ref_=ast_sto_dp"
         ],
         "active" : true,
         "default_browser" : "firefox"
