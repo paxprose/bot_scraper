@@ -59,6 +59,12 @@ class Endpoint {
                             }
                         }
                         if(!evaluations.some((e) => e == 0)){
+                            // console.log(JSON.stringify({
+                            //     status: status,
+                            //     headers: await res.headers(),
+                            //     body: dom.body,
+                            //     url: url,
+                            // }));
                             return {
                                 status: status,
                                 headers: await res.headers(),
