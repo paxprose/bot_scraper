@@ -9,7 +9,7 @@ class Nvidia extends Endpoint {
         this.options = {
             //'intercept' : ['image', 'stylesheet', 'font'],
             waitUntil: 'networkidle0',
-            domEval: 'OUT OF STOCK',
+            domEval: ['OUT OF STOCK'],
             useCookies: true,
         };
     }

@@ -8,7 +8,7 @@ class Amazon extends Endpoint {
         this.name = 'amazon';
         this.options = {
             waitUntil: 'networkidle0',
-            domEval: 'Currently unavailable',
+            domEval: [ 'Currently unavailable' ],
             useCookies: true,
         };
     }

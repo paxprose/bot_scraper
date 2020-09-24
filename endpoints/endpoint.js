@@ -51,7 +51,14 @@ class Endpoint {
                             await cookiemanager.replace(url, cookies);
                         }
 
-                        if (!dom.body.includes(options.domEval) & (status == 200)) {
+                        var evaluations = [];
+                        for(var i = 0; i <= options.domEval.length -1; i++){
+                            evaluations.push(!dom.body.includes(options.domEval[i]) & (status == 200));
+                            if(evaluations[i] == false){
+                                break; 
+                            }
+                        }
+                        if(!evaluations.some((e) => e == 0)){
                             return {
                                 status: status,
                                 headers: await res.headers(),

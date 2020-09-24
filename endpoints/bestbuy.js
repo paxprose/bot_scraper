@@ -19,7 +19,7 @@ class BestBuy extends Endpoint {
                 ],
             ],
             waitUntil: 'domcontentloaded',
-            domEval: 'Sold Out',
+            domEval: ['Sold Out', 'Coming Soon'],
         };
     }
 
