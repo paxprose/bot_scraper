@@ -32,6 +32,7 @@ _note_ : running this behind a vpn is recommended
 
 ## TODO's
 
+- include 3090 urls.
 - ~~Only runs once and exits - put it it in a loop with some threadsleep behavior so you don't get locked out~~
   - tossed everything inside of a blocking event loop
 - ~~refactor so that endpoints inherit from a base~~
