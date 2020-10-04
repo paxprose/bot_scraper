@@ -1,6 +1,6 @@
 'use-strict';
 
-const cookiemanager = require('../cookies/cookiemanager');
+const cookiemanager = require('../../cookies/cookiemanager');
 const open = require('open');
 
 class Endpoint {
@@ -52,13 +52,13 @@ class Endpoint {
                         }
 
                         var evaluations = [];
-                        for(var i = 0; i <= options.domEval.length -1; i++){
+                        for (var i = 0; i <= options.domEval.length - 1; i++) {
                             evaluations.push(!dom.body.includes(options.domEval[i]) & (status == 200));
-                            if(evaluations[i] == false){
-                                break; 
+                            if (evaluations[i] == false) {
+                                break;
                             }
                         }
-                        if(!evaluations.some((e) => e == 0)){
+                        if (!evaluations.some((e) => e == 0)) {
                             // console.log(JSON.stringify({
                             //     status: status,
                             //     headers: await res.headers(),

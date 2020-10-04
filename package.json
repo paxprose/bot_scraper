@@ -7,12 +7,13 @@
     "start": "node index.js",
     "format": "npm run private:format -- --write",
     "check-format": "npm run private:format -- --list-different",
-    "private:format": "prettier index.js \"endpoints/*.js\" \"cookies/*.js\"",
+    "private:format": "prettier index.js \"src/**/*.js\" \"cookies/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "GPLv3",
   "dependencies": {
+    "argparse": "^2.0.1",
     "axios": "^0.20.0",
     "open": "^7.2.1",
     "puppeteer": "^5.3.0",

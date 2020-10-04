@@ -1,5 +1,5 @@
 {
-    "refreshrt": 30000,
+    "refresh_rate": 30000,
     "debug": true,
     "nvidia": {
         "urls": [
@@ -28,7 +28,7 @@
             "https://www.bestbuy.com/site/asus-tuf-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-black/6432446.p?skuId=6432446",
             "https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657"
         ],
-        "active": true,
+        "active": false,
         "default_browser": "firefox"
     },
     "amazon": {
@@ -47,7 +47,7 @@
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJGNJ81?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJLLF7G?ref_=ast_sto_dp"
         ],
-        "active": true,
+        "active": false,
         "default_browser": "firefox"
     }
 }
