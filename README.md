@@ -45,7 +45,7 @@ _note_ : running this behind a vpn is recommended
 
 ## Notes
 
-- join our discord! _https://discord.gg/fpAcJE8_
+- join our discord! <https://discord.gg/fpAcJE8>
 
 ## License
 

@@ -1,17 +1,16 @@
 {
-
-    "refreshrt" : 30000,
-    "debug" : true,
-    "nvidia" : {
-        "urls" : [
+    "refresh_rate": 30000,
+    "debug": true,
+    "nvidia": {
+        "urls": [
             "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203080",
             "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=1&locale=en-us&gpu=RTX%203090"
         ],
-        "active" : true,
-        "default_browser" : "firefox"
+        "active": true,
+        "default_browser": "firefox"
     },
     "bestbuy": {
-        "urls" : [
+        "urls": [
             "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
             "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621",
             "https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175",
@@ -29,11 +28,11 @@
             "https://www.bestbuy.com/site/asus-tuf-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-black/6432446.p?skuId=6432446",
             "https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657"
         ],
-        "active" : true,
-        "default_browser" : "firefox"
+        "active": false,
+        "default_browser": "firefox"
     },
     "amazon": {
-        "urls" : [
+        "urls": [
             "https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3080GAMING/dp/B08HJTH61J?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp",
@@ -48,7 +47,7 @@
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJGNJ81?ref_=ast_sto_dp",
             "https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HJLLF7G?ref_=ast_sto_dp"
         ],
-        "active" : true,
-        "default_browser" : "firefox"
+        "active": false,
+        "default_browser": "firefox"
     }
 }
